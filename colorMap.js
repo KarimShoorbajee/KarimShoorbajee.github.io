@@ -1,3 +1,22 @@
+var width = 1280;
+var height = 640;
+var rangeBoxWidth = 60;
+var rangeBoxHeight = 30;
+var colorArray = [[63, 18, 18],[139,20,24],[186,42,33],[244, 122, 66],[250,174,11],[186,209,17],[38,178,45],[28,101,28],[47,66,81],[89,102,180],[60,135,200],[48,95,187],[84,96,196],[176,123,231],[255,255,255]];
+
+function drawTempBox() {
+  for (var i = 0; i < colorArray.length; i++) {
+    fill(colorArray[i][0],colorArray[i][1],colorArray[i][2]);
+    rect((i*rangeBoxWidth)-(1280/2),-(640/2),rangeBoxWidth,rangeBoxHeight);
+    if (i != 14)
+      fill(255,255,255);
+    else fill(0,0,0);
+    textSize(15);
+    textAlign(CENTER,TOP);
+    text(">"+(110-i*10),(i*rangeBoxWidth)-(1280/2)+20,-(640/2));
+  }
+}
+
 function mapColors(temp) {
   if (temp > 1100) {
     return [230,166,183];
@@ -42,6 +61,6 @@ function mapColors(temp) {
     return [176,123,231];
   }
   else {
-    return [255,255,255]
+    return [255,255,255];
   }
 }

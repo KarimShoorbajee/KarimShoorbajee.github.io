@@ -38,6 +38,7 @@ function setup () {
   translate(1280/2, 640/2);
   imageMode(CENTER);
   image(mapImage,0,0);
+  drawTempBox();
   for (var i = 0; i < temps.length;i++) {
     var data = temps[i].split(/ +/);
     indexes_in_temp.push(data[0]);
@@ -69,10 +70,6 @@ function draw() {
     }
     i++;
   }
-}
-
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 /*
