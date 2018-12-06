@@ -68,7 +68,11 @@ function draw() {
       fill(bloop[0],bloop[1],bloop[2]);
       ellipse(x,y,4.5,4.5);
     }
+    writeMonth(i);
     i++;
+  }
+  if (i==12) {
+    i=0;
   }
 }
 

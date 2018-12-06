@@ -13,7 +13,7 @@ function drawTempBox() {
     else fill(0,0,0);
     textSize(15);
     textAlign(CENTER,TOP);
-    text(">"+(110-i*10),(i*rangeBoxWidth)-(1280/2)+20,-(640/2));
+    text(">"+(110-i*10)+"°F",(i*rangeBoxWidth)-(1280/2)+25,-(640/2));
   }
 }
 
@@ -63,4 +63,55 @@ function mapColors(temp) {
   else {
     return [255,255,255];
   }
+}
+
+function writeMonth(mnth) {
+  var mnth_str;
+  switch (mnth) {
+    case 0:
+      mnth_str = "January";
+      break;
+    case 1:
+      mnth_str = "February";
+      break;
+    case 2:
+      mnth_str = "March";
+      break;
+    case 3:
+      mnth_str = "April";
+      break;
+    case 4:
+      mnth_str = "May";
+      break;
+    case 5:
+      mnth_str = "June";
+      break;
+    case 6:
+      mnth_str = "July";
+      break;
+    case 7:
+      mnth_str = "August";
+      break;
+    case 8:
+      mnth_str = "September";
+      break;
+    case 9:
+      mnth_str = "October";
+      break;
+    case 10:
+      mnth_str = "November";
+      break;
+    case 11:
+      mnth_str = "December";
+      break;
+    }
+
+
+  textSize(30);
+  textAlign(CENTER,TOP);
+  fill(255,255,255);
+  rect(-(1280/2),-(640/2)+30,150,50)
+  fill(0,0,0);
+  text(mnth_str,-(1280/2)+70,-(640/2)+30);
+
 }
