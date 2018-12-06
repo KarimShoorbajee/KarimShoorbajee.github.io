@@ -33,7 +33,7 @@ function mercY(lat) {
 }
 
 function setup () {
-  frameRate(1);
+  frameRate(.5);
   createCanvas(1280,800);
   translate(1280/2, 640/2);
   imageMode(CENTER);
