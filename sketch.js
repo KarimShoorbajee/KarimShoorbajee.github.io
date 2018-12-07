@@ -64,8 +64,8 @@ function draw() {
       var x = mercX(lon) - cx;
       var y = mercY(lat) - cy;
       noStroke();
-      var bloop = mapColors(temperature);
-      fill(bloop[0],bloop[1],bloop[2]);
+      var mapRGB = mapColors(temperature);
+      fill(mapRGB[0],mapRGB[1],mapRGB[2]);
       ellipse(x,y,4.5,4.5);
     }
     writeMonth(i);
